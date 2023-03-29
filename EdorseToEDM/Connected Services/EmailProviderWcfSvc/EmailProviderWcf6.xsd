@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel.Enum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel.Enum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="MailEncoding">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Window874">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UTF8">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MailEncoding" nillable="true" type="tns:MailEncoding" />
+</xs:schema>

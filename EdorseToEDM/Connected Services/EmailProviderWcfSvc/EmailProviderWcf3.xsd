@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel.Enum" />
+  <xs:complexType name="MailParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" minOccurs="0" name="FileAttechments" nillable="true" type="q1:ArrayOfFile_Upload" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBigMailBody" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHtmlBody" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsKeepMailLog" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MailId" type="xs:long" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" minOccurs="0" name="Receipients" nillable="true" type="q2:MailReceipients" />
+      <xs:element minOccurs="0" name="ReferenceOptional" nillable="true" type="tns:MailTrackingReferenceOptional" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailParams" nillable="true" type="tns:MailParams" />
+  <xs:complexType name="MailTrackingReferenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomeTracking" nillable="true" type="tns:ArrayOfMailCustomeTracking" />
+      <xs:element minOccurs="0" name="Tracking" nillable="true" type="tns:ArrayOfMailBaseTracking" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailTrackingReferenceOptional" nillable="true" type="tns:MailTrackingReferenceOptional" />
+  <xs:complexType name="ArrayOfMailCustomeTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailCustomeTracking" nillable="true" type="tns:MailCustomeTracking" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailCustomeTracking" nillable="true" type="tns:ArrayOfMailCustomeTracking" />
+  <xs:complexType name="MailCustomeTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailCustomeTracking" nillable="true" type="tns:MailCustomeTracking" />
+  <xs:complexType name="ArrayOfMailBaseTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailBaseTracking" nillable="true" type="tns:MailBaseTracking" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailBaseTracking" nillable="true" type="tns:ArrayOfMailBaseTracking" />
+  <xs:complexType name="MailBaseTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Jobs" nillable="true" type="tns:ArrayOfJobInfo" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyHolding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailBaseTracking" nillable="true" type="tns:MailBaseTracking" />
+  <xs:complexType name="ArrayOfJobInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobInfo" nillable="true" type="tns:JobInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobInfo" nillable="true" type="tns:ArrayOfJobInfo" />
+  <xs:complexType name="JobInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SubJobs" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobInfo" nillable="true" type="tns:JobInfo" />
+  <xs:complexType name="MailParamsOld">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseParam" nillable="true" type="tns:MailParams" />
+      <xs:element minOccurs="0" name="ImageDataFileInfo" nillable="true" type="tns:ArrayOfImageDataFile" />
+      <xs:element minOccurs="0" name="IsEmbedImage" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel.Enum" minOccurs="0" name="MailEncoding" type="q4:MailEncoding" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailParamsOld" nillable="true" type="tns:MailParamsOld" />
+  <xs:complexType name="ArrayOfImageDataFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageDataFile" nillable="true" type="tns:ImageDataFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageDataFile" nillable="true" type="tns:ArrayOfImageDataFile" />
+  <xs:complexType name="ImageDataFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageBytes" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageKeyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageDataFile" nillable="true" type="tns:ImageDataFile" />
+  <xs:complexType name="ArrayOfMailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailInfo" nillable="true" type="tns:MailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailInfo" nillable="true" type="tns:ArrayOfMailInfo" />
+  <xs:complexType name="MailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" minOccurs="0" name="FileAttechments" nillable="true" type="q5:ArrayOfFile_Upload" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBigMailBody" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHtmlBody" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsKeepMailLog" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MailId" type="xs:long" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" minOccurs="0" name="Receipients" nillable="true" type="q6:MailReceipients" />
+      <xs:element minOccurs="0" name="ReferenceOptional" nillable="true" type="tns:MailTrackingReferenceOptional" />
+      <xs:element minOccurs="0" name="SendDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SendStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailInfo" nillable="true" type="tns:MailInfo" />
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3ae130ea-f84a-4aa3-a212-7e7ef7902053" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="ITUtility" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EasySolutionWcf.disco" MetadataType="Disco" ID="17ac8d24-74f9-40e6-9fa3-7c5b2f5e05e1" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?disco" />
+    <MetadataFile FileName="EasySolutionSvc.wsdl" MetadataType="Wsdl" ID="02292308-302d-4615-925b-1fbbf361e015" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?wsdl" />
+    <MetadataFile FileName="EasySolutionWcf.xsd" MetadataType="Schema" ID="0f345927-7637-4c00-b5d6-9c71c8d0d36d" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="EasySolutionWcf1.xsd" MetadataType="Schema" ID="7eeb9958-5e9a-4cec-8145-343783873286" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="EasySolutionWcf2.xsd" MetadataType="Schema" ID="9047449b-e951-45ed-96f3-22c9e1deb3bd" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="EasySolutionWcf3.xsd" MetadataType="Schema" ID="1abef81d-b64e-4f47-9113-2261e296b8d7" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="EasySolutionWcf4.xsd" MetadataType="Schema" ID="7a3556f3-6eb5-4c00-ac8c-22c07a3862d5" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="EasySolutionWcf5.xsd" MetadataType="Schema" ID="9d720d64-e653-4fb4-bf11-133dbc56b0b2" SourceId="1" SourceUrl="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

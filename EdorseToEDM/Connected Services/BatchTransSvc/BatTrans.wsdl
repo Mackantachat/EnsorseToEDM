@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BatTrans" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+      <xsd:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" />
+      <xsd:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AppSecurityProvider" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBatTrans_AddTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTrans" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_AddTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_AddTransByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransByCode" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_AddTransByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_UpdateTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrans" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_UpdateTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDataBatTrans_Log_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBatTrans_Log" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDataBatTrans_Log_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBatTrans_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_EditVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditVerify" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_EditVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDetail_ArBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetail_ArBatch" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDetail_ArBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetail_ArBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDetail_AR_BATCH_DETAIL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetail_AR_BATCH_DETAIL" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetDetail_AR_BATCH_DETAIL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetail_AR_BATCH_DETAILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveData_AR_BATCH_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveData_AR_BATCH" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveData_AR_BATCH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveData_AR_BATCHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveData_AR_BATCH_DETAIL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveData_AR_BATCH_DETAIL" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveData_AR_BATCH_DETAIL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveData_AR_BATCH_DETAILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveDataARBATCH_AND_BATCHDETAIL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDataARBATCH_AND_BATCHDETAIL" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_SaveDataARBATCH_AND_BATCHDETAIL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDataARBATCH_AND_BATCHDETAILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermission" />
+  </wsdl:message>
+  <wsdl:message name="IBatTrans_GetPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBatTrans">
+    <wsdl:operation name="AddTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/AddTrans" message="tns:IBatTrans_AddTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/AddTransResponse" message="tns:IBatTrans_AddTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTransByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/AddTransByCode" message="tns:IBatTrans_AddTransByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/AddTransByCodeResponse" message="tns:IBatTrans_AddTransByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/UpdateTrans" message="tns:IBatTrans_UpdateTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/UpdateTransResponse" message="tns:IBatTrans_UpdateTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBatTrans_Log">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/GetDataBatTrans_Log" message="tns:IBatTrans_GetDataBatTrans_Log_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/GetDataBatTrans_LogResponse" message="tns:IBatTrans_GetDataBatTrans_Log_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/EditVerify" message="tns:IBatTrans_EditVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/EditVerifyResponse" message="tns:IBatTrans_EditVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail_ArBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/GetDetail_ArBatch" message="tns:IBatTrans_GetDetail_ArBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/GetDetail_ArBatchResponse" message="tns:IBatTrans_GetDetail_ArBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail_AR_BATCH_DETAIL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/GetDetail_AR_BATCH_DETAIL" message="tns:IBatTrans_GetDetail_AR_BATCH_DETAIL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/GetDetail_AR_BATCH_DETAILResponse" message="tns:IBatTrans_GetDetail_AR_BATCH_DETAIL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveData_AR_BATCH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/SaveData_AR_BATCH" message="tns:IBatTrans_SaveData_AR_BATCH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/SaveData_AR_BATCHResponse" message="tns:IBatTrans_SaveData_AR_BATCH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveData_AR_BATCH_DETAIL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/SaveData_AR_BATCH_DETAIL" message="tns:IBatTrans_SaveData_AR_BATCH_DETAIL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/SaveData_AR_BATCH_DETAILResponse" message="tns:IBatTrans_SaveData_AR_BATCH_DETAIL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDataARBATCH_AND_BATCHDETAIL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/SaveDataARBATCH_AND_BATCHDETAIL" message="tns:IBatTrans_SaveDataARBATCH_AND_BATCHDETAIL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/SaveDataARBATCH_AND_BATCHDETAILResponse" message="tns:IBatTrans_SaveDataARBATCH_AND_BATCHDETAIL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBatTrans/GetPermission" message="tns:IBatTrans_GetPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBatTrans/GetPermissionResponse" message="tns:IBatTrans_GetPermission_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBatTrans" type="tns:IBatTrans">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddTrans">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/AddTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTransByCode">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/AddTransByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrans">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/UpdateTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBatTrans_Log">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/GetDataBatTrans_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditVerify">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/EditVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail_ArBatch">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/GetDetail_ArBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail_AR_BATCH_DETAIL">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/GetDetail_AR_BATCH_DETAIL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveData_AR_BATCH">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/SaveData_AR_BATCH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveData_AR_BATCH_DETAIL">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/SaveData_AR_BATCH_DETAIL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDataARBATCH_AND_BATCHDETAIL">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/SaveDataARBATCH_AND_BATCHDETAIL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermission">
+      <soap:operation soapAction="http://tempuri.org/IBatTrans/GetPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BatTrans">
+    <wsdl:port name="BasicHttpBinding_IBatTrans" binding="tns:BasicHttpBinding_IBatTrans">
+      <soap:address location="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

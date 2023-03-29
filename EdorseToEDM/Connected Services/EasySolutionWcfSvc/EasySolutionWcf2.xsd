@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" />
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="GetChannelType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChannelTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetChannelTypeResult" nillable="true" type="q1:ProcessResult" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q2:ArrayOfAUTB_CHANNEL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPolicyHolding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPolicyHoldingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetPolicyHoldingResult" nillable="true" type="q3:ProcessResult" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="policyholding" nillable="true" type="q4:ArrayOfPOLICYHOLDING" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="conditions" nillable="true" type="q5:DataLogs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getListLogResult" nillable="true" type="q6:ProcessResult" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="result" nillable="true" type="q7:ArrayOfDataLogs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRole">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getRoleResult" nillable="true" type="q8:ProcessResult" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q9:ArrayOfIMG_ROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="conditions" nillable="true" type="q10:IMG_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getUserListResult" nillable="true" type="q11:ProcessResult" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q12:ArrayOfIMG_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelUserAndGetUserList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelUserAndGetUserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DelUserAndGetUserListResult" nillable="true" type="q13:ProcessResult" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q14:ArrayOfIMG_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUpdateIMG_User">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="conditions" nillable="true" type="q15:IMG_USER" />
+        <xs:element minOccurs="0" name="isAdd" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUpdateIMG_UserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddUpdateIMG_UserResult" nillable="true" type="q16:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetAccessTypeResult" nillable="true" type="q17:ProcessResult" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q18:ArrayOfIMG_ACCESS_TYPE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetWebCategoryResult" nillable="true" type="q19:ProcessResult" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q20:ArrayOfIMG_CATEGORY" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Row_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getListPermissionResult" nillable="true" type="q21:ProcessResult" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q22:ArrayOfPermissionRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUpdatePermCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isAdd" type="xs:boolean" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="Role" nillable="true" type="q23:IMG_ROLE" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataSave" nillable="true" type="q24:ArrayOfPermissionRole" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="menu" nillable="true" type="q25:ArrayOfIMG_MENU_BAR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUpdatePermConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddUpdatePermConditionResult" nillable="true" type="q26:ProcessResult" />
+        <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZTB_USER">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="condition" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZTB_USERResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetZTB_USERResult" nillable="true" type="q27:ProcessResult" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q28:ArrayOfZTB_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DETAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="search" nillable="true" type="q29:EASYWEB_SEARCH_DETAILS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DETAILResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SEARCH_DETAILResult" nillable="true" type="q30:ProcessResult" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="result" nillable="true" type="q31:ArrayOfEASYWEB_SEARCH_DETAILS" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="Hearder" nillable="true" type="q32:ArrayOfIMG_SYSTEM_CONTROL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DEATIL_TREE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="conditions" nillable="true" type="q33:EASYWEB_SEARCH_DETAILS" />
+        <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DEATIL_TREEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SEARCH_DEATIL_TREEResult" nillable="true" type="q34:ProcessResult" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q35:ArrayOfCATE_GROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DEATIL_BY_TREE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="imageID" nillable="true" type="q36:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_DEATIL_BY_TREEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SEARCH_DEATIL_BY_TREEResult" nillable="true" type="q37:ProcessResult" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q38:ArrayOfIMG_IMAGE" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="Hearder" nillable="true" type="q39:ArrayOfIMG_SYSTEM_CONTROL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CertNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetListIDResult" nillable="true" type="q40:ProcessResult" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="result" nillable="true" type="q41:ArrayOfidmodel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModelSearchLists">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModelSearchListsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ModelSearchListsResult" nillable="true" type="q42:ProcessResult" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="result" nillable="true" type="q43:ArrayOfModelSearchLists" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetCategoryListResult" nillable="true" type="q44:ProcessResult" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="result" nillable="true" type="q45:ArrayOfCategoryList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="B_DOWNLOAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:long" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="B_DOWNLOADResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="B_DOWNLOADResult" nillable="true" type="q46:ProcessResult" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="returnFile" nillable="true" type="q47:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="View">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageID" type="xs:long" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ViewResult" nillable="true" type="q48:ProcessResult" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="returnFile" nillable="true" type="q49:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DeleteResult" nillable="true" type="q50:ProcessResult" />
+        <xs:element minOccurs="0" name="row" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByEdite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByEditeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DeleteByEditeResult" nillable="true" type="q51:ProcessResult" />
+        <xs:element minOccurs="0" name="row" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DataUserResult" nillable="true" type="q52:ProcessResult" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="user" nillable="true" type="q53:DATA_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSetDelete">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSetDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetSetDeleteResult" nillable="true" type="q54:ProcessResult" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q55:ArrayOfIMG_SET_DELETE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByTableName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="values" nillable="true" type="q56:IMG_SET_DELETE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByTableNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataByTableNameResult" nillable="true" type="q57:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLogsDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q58:IMG_HD_DELETE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLogsDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UpdateLogsDeleteResult" nillable="true" type="q59:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportEs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="cateIndex" nillable="true" type="q60:ArrayOfCATEGORY_INDEX" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="file" nillable="true" type="q61:DataFile" />
+        <xs:element minOccurs="0" name="categoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportEsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ImportEsResult" nillable="true" type="q62:ProcessResult" />
+        <xs:element minOccurs="0" name="image_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Execute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commandtext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isreadMode" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ExecuteResult" nillable="true" type="q63:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecutePL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commandtext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecutePLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ExecutePLResult" nillable="true" type="q64:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSERT_LOGS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="logs" nillable="true" type="q65:IMG_IMAGE_LOGS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSERT_LOGSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="INSERT_LOGSResult" nillable="true" type="q66:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCateGoryByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="access_type" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCateGoryByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetCateGoryByUserIDResult" nillable="true" type="q67:ProcessResult" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q68:ArrayOfCATEGORY_INSERT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetailEdit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="img_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetailEditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getDetailEditResult" nillable="true" type="q69:ProcessResult" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q70:ArrayOfIMAGE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTreeNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policy_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policy_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="app_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="app_no" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTreeNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="getTreeNodeResult" nillable="true" type="q71:ProcessResult" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q72:ArrayOfEASYWINAPP_TREENODE_ITEM" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="IMG_DETAIL" nillable="true" type="q73:ArrayOfIMG_IMAGE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailPermission">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetailPermissionResult" nillable="true" type="q74:ProcessResult" />
+        <xs:element minOccurs="0" name="AccessType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CateGory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RolId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WinappEdit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Image_id_old" nillable="true" type="xs:long" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="filedata" nillable="true" type="q75:DataFile" />
+        <xs:element minOccurs="0" name="catetype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WinappEditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="WinappEditResult" nillable="true" type="q76:ProcessResult" />
+        <xs:element minOccurs="0" name="Image_id_new" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="permissionWinapp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="permissionWinappResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="permissionWinappResult" nillable="true" type="q77:ProcessResult" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="permission" nillable="true" type="q78:ArrayOfWINAPP_AUTHORITY" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="isCancelResult" nillable="true" type="q79:ProcessResult" />
+        <xs:element minOccurs="0" name="is_cancel" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_current">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_currentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ppSvc_currentResult" nillable="true" type="q80:ProcessResult" />
+        <xs:element minOccurs="0" name="currentPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_Name">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rootBack" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_NameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ppSvc_NameResult" nillable="true" type="q81:ProcessResult" />
+        <xs:element xmlns:q82="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileName" nillable="true" type="q82:ArrayOfstring" />
+        <xs:element xmlns:q83="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dirName" nillable="true" type="q83:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pathDir_forCopy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rootPath" type="xs:int" />
+        <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ppSvcResult" nillable="true" type="q84:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_CopyALL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourcePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="des_path" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_CopyALLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ppSvc_CopyALLResult" nillable="true" type="q85:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_Info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dir" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ppSvc_InfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ppSvc_InfoResult" nillable="true" type="q86:ProcessResult" />
+        <xs:element xmlns:q87="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileName" nillable="true" type="q87:ArrayOfstring" />
+        <xs:element xmlns:q88="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dirName" nillable="true" type="q88:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage_ID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policy_id" type="xs:long" />
+        <xs:element minOccurs="0" name="cate_ID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage_IDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetImage_IDResult" nillable="true" type="q89:ProcessResult" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q90:ArrayOfIMAGE_PAGE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_image_from_pdffile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pdfFile" nillable="true" type="q91:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_image_from_pdffileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="get_image_from_pdffileResult" nillable="true" type="q92:ProcessResult" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="tiffFiles" nillable="true" type="q93:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkDuplicate_data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q94:ArrayOfCATEGORY_INDEX" />
+        <xs:element minOccurs="0" name="categoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkDuplicate_dataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="checkDuplicate_dataResult" nillable="true" type="q95:ProcessResult" />
+        <xs:element minOccurs="0" name="isDuplicate" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportEsRCP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q96:IMPORT_RECEIPT" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UploadFile" nillable="true" type="q97:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportEsRCPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ImportEsRCPResult" nillable="true" type="q98:ProcessResult" />
+        <xs:element minOccurs="0" name="image_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_MENU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_MENUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_MENUResult" nillable="true" type="q99:ProcessResult" />
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q100:ArrayOfIMG_MENU_BAR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_MENU_BY_N_USERID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_MENU_BY_N_USERIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_MENU_BY_N_USERIDResult" nillable="true" type="q101:ProcessResult" />
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q102:ArrayOfIMG_MENU_BAR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageByPDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filesdata" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageByPDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetPageByPDFResult" nillable="true" type="q103:ProcessResult" />
+        <xs:element minOccurs="0" name="pagenumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageByTiff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filesdata" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageByTiffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetPageByTiffResult" nillable="true" type="q104:ProcessResult" />
+        <xs:element minOccurs="0" name="pagenumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataFromFileName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataFromFileNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataFromFileNameResult" nillable="true" type="q105:ProcessResult" />
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q106:ArrayOfCATEGORY_INDEX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportRCP_F">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q107:IMPORT_RECEIPT" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UploadFile" nillable="true" type="q108:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportRCP_FResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ImportRCP_FResult" nillable="true" type="q109:ProcessResult" />
+        <xs:element minOccurs="0" name="image_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCateIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataObjects" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCateIndexResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GenerateCateIndexResult" nillable="true" type="q110:ProcessResult" />
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="data" nillable="true" type="q111:ArrayOfCATEGORY_INDEX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCateIndexLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dataObjects" nillable="true" type="q112:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCateIndexLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GenerateCateIndexLotResult" nillable="true" type="q113:ProcessResult" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="data" nillable="true" type="q114:ArrayOfCATEGORY_INDEX_LOT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetData_FOR_IMS_EMD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policy_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetData_FOR_IMS_EMDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetData_FOR_IMS_EMDResult" nillable="true" type="q115:ProcessResult" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataobjects" nillable="true" type="q116:EASYWEB_SEARCH_DETAILS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryFromCate_id">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryFromCate_idResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="CategoryFromCate_idResult" nillable="true" type="q117:ProcessResult" />
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q118:ArrayOfIMG_CATEGORY" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_IMS_CATEGORY">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_IMS_CATEGORYResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_IMS_CATEGORYResult" nillable="true" type="q119:ProcessResult" />
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q120:ArrayOfIMG_IMS_CATEGORY" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSERT_IMAGE_TO_SORT_APP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EDM_IMAGE_ID" type="xs:long" />
+        <xs:element minOccurs="0" name="POLICY_ID" type="xs:long" />
+        <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSERT_IMAGE_TO_SORT_APPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="INSERT_IMAGE_TO_SORT_APPResult" nillable="true" type="q121:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_APP_END">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_APP_ENDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_APP_ENDResult" nillable="true" type="q122:ProcessResult" />
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="data" nillable="true" type="q123:IMG_APP_END" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changePrintApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q124:IMG_IMAGE" />
+        <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changePrintAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="changePrintAppResult" nillable="true" type="q125:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_DATA_BY_POLICY_ID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="condition" nillable="true" type="q126:POLICY_INFO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_DATA_BY_POLICY_IDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_ALL_DATA_BY_POLICY_IDResult" nillable="true" type="q127:ProcessResult" />
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q128:POLICY_INFO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Convert_PDF_TIFF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pdfFile" nillable="true" type="q129:DataFile" />
+        <xs:element minOccurs="0" name="compression" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Convert_PDF_TIFFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="Convert_PDF_TIFFResult" nillable="true" type="q130:ProcessResult" />
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="fileTiff" nillable="true" type="q131:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_DATA_BY_POLICY_ID_LOT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="POLICY_ID" nillable="true" type="q132:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_DATA_BY_POLICY_ID_LOTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_ALL_DATA_BY_POLICY_ID_LOTResult" nillable="true" type="q133:ProcessResult" />
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q134:ArrayOfPOLICY_INFO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_FILE_APP_NO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_FILE_APP_NOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_FILE_APP_NOResult" nillable="true" type="q135:ProcessResult" />
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q136:ArrayOfAPP_NEWBIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_LICENSE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="license_name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_LICENSEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_LICENSEResult" nillable="true" type="q137:ProcessResult" />
+        <xs:element minOccurs="0" name="dataObject" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_LICENSE">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ALL_LICENSEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_ALL_LICENSEResult" nillable="true" type="q138:ProcessResult" />
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q139:ArrayOfIMG_LICENSE_SUPPORT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_PERMISSION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_PERMISSIONResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ADD_PERMISSIONResult" nillable="true" type="q140:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_EDM_CONTENT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="image_id" nillable="true" type="q141:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_EDM_CONTENTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_EDM_CONTENTResult" nillable="true" type="q142:ProcessResult" />
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q143:ArrayOfEDM_Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Compression">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="datain" nillable="true" type="q144:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompressionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="CompressionResult" nillable="true" type="q145:ProcessResult" />
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="dataout" nillable="true" type="q146:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grayscale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="datain" nillable="true" type="q147:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grayscaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="grayscaleResult" nillable="true" type="q148:ProcessResult" />
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="dataout" nillable="true" type="q149:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policyId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UploadDetailResult" nillable="true" type="q150:ProcessResult" />
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q151:EASYWEB_SEARCH_DETAILS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_IMAGEID_APPNO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_IMAGEID_APPNOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_IMAGEID_APPNOResult" nillable="true" type="q152:ProcessResult" />
+        <xs:element minOccurs="0" name="imageId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailPolicyForReceiptPol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="policyid" nillable="true" type="q153:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailPolicyForReceiptPolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetailPolicyForReceiptPolResult" nillable="true" type="q154:ProcessResult" />
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q155:ArrayOfPOLICY_INFO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listdocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listdocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="listdocumentResult" nillable="true" type="q156:ProcessResult" />
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q157:ArrayOflistdocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contentid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetContentFileResult" nillable="true" type="q158:ProcessResult" />
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="dataObjects" nillable="true" type="q159:DataFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertGUID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertGUIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="InsertGUIDResult" nillable="true" type="q160:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailByRegistnumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="registernumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailByRegistnumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetailByRegistnumberResult" nillable="true" type="q161:ProcessResult" />
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q162:EDM_IMPORT_CLAIM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailByPolicyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PolicyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLAIM_NUMBER" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailByPolicyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetailByPolicyIDResult" nillable="true" type="q163:ProcessResult" />
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q164:EDM_IMPORT_CLAIM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByimageID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMAGE_ID" type="xs:long" />
+        <xs:element minOccurs="0" name="claimno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLAIM_REQ_DATE" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByimageIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataByimageIDResult" nillable="true" type="q165:ProcessResult" />
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q166:EDM_IMPORT_CLAIM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IMSEDMLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageims" type="xs:long" />
+        <xs:element minOccurs="0" name="imageedm" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IMSEDMLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="IMSEDMLogsResult" nillable="true" type="q167:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkPermisPrint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessType" type="xs:int" />
+        <xs:element minOccurs="0" name="Image_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkPermisPrintResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="checkPermisPrintResult" nillable="true" type="q168:ProcessResult" />
+        <xs:element minOccurs="0" name="isPermission" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetConditionTypeResult" nillable="true" type="q169:ProcessResult" />
+        <xs:element minOccurs="0" name="contype_id" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ADMIN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_ADMINResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_ADMINResult" nillable="true" type="q170:ProcessResult" />
+        <xs:element minOccurs="0" name="isAdmin" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SHREDDERACTIVE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SYSTEM_TYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SHREDDERACTIVEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SHREDDERACTIVEResult" nillable="true" type="q171:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

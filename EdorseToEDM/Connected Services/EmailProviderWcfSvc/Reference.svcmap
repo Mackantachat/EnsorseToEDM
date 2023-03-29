@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="53cc30bf-827a-40a8-b0fe-30ee1e2e9459" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="ITUtility" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmailProviderWcf.disco" MetadataType="Disco" ID="0fa57ef0-51aa-4e00-b25a-a43c3c93cf80" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?disco" />
+    <MetadataFile FileName="EmailProviderWcf.xsd" MetadataType="Schema" ID="a0fee606-8308-47e0-b5d1-ab8cdf81218e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmailProviderWcf1.xsd" MetadataType="Schema" ID="e0f33c7e-9e4a-4de2-bd2f-c3927eda3eac" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmailProviderWcf2.xsd" MetadataType="Schema" ID="afd097ae-fe7d-4054-b515-18f0caedd355" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="EmailProviderWcf3.xsd" MetadataType="Schema" ID="3b7deaf7-ebd0-4ad1-b9c1-eb4d30aed2d2" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmailProviderWcf4.xsd" MetadataType="Schema" ID="f99d3326-25ca-42ee-843c-1b2ec4a11d4b" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="EmailProviderWcf5.xsd" MetadataType="Schema" ID="18ee1eec-e96b-4121-b96a-daeac9473ee9" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="EmailProvider.wsdl" MetadataType="Wsdl" ID="da92b71c-7983-4192-b8ae-019940cc433f" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?wsdl" />
+    <MetadataFile FileName="EmailProviderWcf6.xsd" MetadataType="Schema" ID="b9248fe4-c509-4560-8624-81cfb98c075f" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="EmailProviderWcf7.xsd" MetadataType="Schema" ID="2106d810-e18c-42fc-a817-fcabe5b0049e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

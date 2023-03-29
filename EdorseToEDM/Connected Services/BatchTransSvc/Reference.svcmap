@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9c78ddf-64a2-4bbd-8165-17794f80f233" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="ITUtility" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BatTrans.xsd" MetadataType="Schema" ID="6c860207-0921-4352-a1f2-a0324552656e" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd2" />
+    <MetadataFile FileName="BatTrans1.xsd" MetadataType="Schema" ID="c25b9277-a8fa-4d5e-9ddf-7ec8d915fac2" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd3" />
+    <MetadataFile FileName="BatTrans2.xsd" MetadataType="Schema" ID="0a20bb69-8d30-41f2-87f7-4fc3eaf5e08e" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd4" />
+    <MetadataFile FileName="BatTrans3.xsd" MetadataType="Schema" ID="7a451555-8a8b-4f2a-91be-3ab046b1be15" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd0" />
+    <MetadataFile FileName="BatTrans.disco" MetadataType="Disco" ID="51e710c9-2497-4335-8080-d307707ede01" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?disco" />
+    <MetadataFile FileName="BatTrans4.xsd" MetadataType="Schema" ID="cffe701c-8ce8-455e-bc0b-afcacd93bd3b" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd1" />
+    <MetadataFile FileName="BatTrans.wsdl" MetadataType="Wsdl" ID="db2b885c-7d0d-4c3e-bb5d-343377601638" SourceId="1" SourceUrl="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

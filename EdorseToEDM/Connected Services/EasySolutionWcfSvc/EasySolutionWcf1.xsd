@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EasySolution.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://pre-uat-02.bla.co.th:88/EasySolutionWcfSvc/EasySolutionWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:complexType name="ArrayOfAUTB_CHANNEL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AUTB_CHANNEL" nillable="true" type="tns:AUTB_CHANNEL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAUTB_CHANNEL" nillable="true" type="tns:ArrayOfAUTB_CHANNEL" />
+  <xs:complexType name="AUTB_CHANNEL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="POLICY_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AUTB_CHANNEL" nillable="true" type="tns:AUTB_CHANNEL" />
+  <xs:complexType name="ArrayOfPOLICYHOLDING">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="POLICYHOLDING" nillable="true" type="tns:POLICYHOLDING" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPOLICYHOLDING" nillable="true" type="tns:ArrayOfPOLICYHOLDING" />
+  <xs:complexType name="POLICYHOLDING">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="POLICYHOLDING" nillable="true" type="tns:POLICYHOLDING" />
+  <xs:complexType name="DataLogs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Event" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSurName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cateDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cateID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataLogs" nillable="true" type="tns:DataLogs" />
+  <xs:complexType name="ArrayOfDataLogs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataLogs" nillable="true" type="tns:DataLogs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataLogs" nillable="true" type="tns:ArrayOfDataLogs" />
+  <xs:complexType name="ArrayOfIMG_ROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_ROLE" nillable="true" type="tns:IMG_ROLE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_ROLE" nillable="true" type="tns:ArrayOfIMG_ROLE" />
+  <xs:complexType name="IMG_ROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TERMINATE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="strTERMINATE_DATE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_ROLE" nillable="true" type="tns:IMG_ROLE" />
+  <xs:complexType name="IMG_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EFF_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="END_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEFF_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strEND_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strROLE_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strSurNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strUserNAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_USER" nillable="true" type="tns:IMG_USER" />
+  <xs:complexType name="ArrayOfIMG_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_USER" nillable="true" type="tns:IMG_USER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_USER" nillable="true" type="tns:ArrayOfIMG_USER" />
+  <xs:complexType name="ArrayOfIMG_ACCESS_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_ACCESS_TYPE" nillable="true" type="tns:IMG_ACCESS_TYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_ACCESS_TYPE" nillable="true" type="tns:ArrayOfIMG_ACCESS_TYPE" />
+  <xs:complexType name="IMG_ACCESS_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACCESS_TYPE_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TERMINATE_DATE" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_ACCESS_TYPE" nillable="true" type="tns:IMG_ACCESS_TYPE" />
+  <xs:complexType name="ArrayOfIMG_CATEGORY">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_CATEGORY" nillable="true" type="tns:IMG_CATEGORY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_CATEGORY" nillable="true" type="tns:ArrayOfIMG_CATEGORY" />
+  <xs:complexType name="IMG_CATEGORY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_GROUP_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EZ_ARCHIVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EZ_SCHEMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INITIALS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ_NO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TERMINATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TERMINATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_CATEGORY" nillable="true" type="tns:IMG_CATEGORY" />
+  <xs:complexType name="ArrayOfPermissionRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermissionRole" nillable="true" type="tns:PermissionRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermissionRole" nillable="true" type="tns:ArrayOfPermissionRole" />
+  <xs:complexType name="PermissionRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_GROUP_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SEQ_NO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cateid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="condition" nillable="true" type="tns:Condition" />
+      <xs:element minOccurs="0" name="permission" nillable="true" type="tns:authority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermissionRole" nillable="true" type="tns:PermissionRole" />
+  <xs:complexType name="Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CLAIM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoanReceipt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtherReceipt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="POLICY" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Condition" nillable="true" type="tns:Condition" />
+  <xs:complexType name="authority">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DELETE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EDIT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="INSERT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PRINT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="READ" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="authority" nillable="true" type="tns:authority" />
+  <xs:complexType name="ArrayOfIMG_MENU_BAR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_MENU_BAR" nillable="true" type="tns:IMG_MENU_BAR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_MENU_BAR" nillable="true" type="tns:ArrayOfIMG_MENU_BAR" />
+  <xs:complexType name="IMG_MENU_BAR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FONT_AWESOME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_CONTROL_STATUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="MENU_CONTROL_STATUS_FLAG" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MENU_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_ID_fix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_STATUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TERMINAT_DATE" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_MENU_BAR" nillable="true" type="tns:IMG_MENU_BAR" />
+  <xs:complexType name="ArrayOfZTB_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTB_USER" nillable="true" type="tns:ZTB_USER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTB_USER" nillable="true" type="tns:ArrayOfZTB_USER" />
+  <xs:complexType name="ZTB_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_USER" nillable="true" type="tns:ZTB_USER" />
+  <xs:complexType name="EASYWEB_SEARCH_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BIRTH_DT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CERT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_NUMBER_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_NUMBER_DATE_TO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE_TO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="END_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCARD_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE_TO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RECEIPT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" type="xs:int" />
+      <xs:element minOccurs="0" name="SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="limited" type="xs:int" />
+      <xs:element minOccurs="0" name="strRECEIPT_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRECEIPT_DATE_TO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EASYWEB_SEARCH_DETAILS" nillable="true" type="tns:EASYWEB_SEARCH_DETAILS" />
+  <xs:complexType name="ArrayOfEASYWEB_SEARCH_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EASYWEB_SEARCH_DETAILS" nillable="true" type="tns:EASYWEB_SEARCH_DETAILS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEASYWEB_SEARCH_DETAILS" nillable="true" type="tns:ArrayOfEASYWEB_SEARCH_DETAILS" />
+  <xs:complexType name="ArrayOfIMG_SYSTEM_CONTROL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_SYSTEM_CONTROL" nillable="true" type="tns:IMG_SYSTEM_CONTROL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_SYSTEM_CONTROL" nillable="true" type="tns:ArrayOfIMG_SYSTEM_CONTROL" />
+  <xs:complexType name="IMG_SYSTEM_CONTROL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GENERAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISC_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IS_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OTHER_DETAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ_ORDER" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TERMINATE" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_SYSTEM_CONTROL" nillable="true" type="tns:IMG_SYSTEM_CONTROL" />
+  <xs:complexType name="ArrayOfCATE_GROUP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CATE_GROUP" nillable="true" type="tns:CATE_GROUP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCATE_GROUP" nillable="true" type="tns:ArrayOfCATE_GROUP" />
+  <xs:complexType name="CATE_GROUP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ChildFiles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClassPerm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" type="tns:enumGroupCate" />
+      <xs:element minOccurs="0" name="childNode" nillable="true" type="tns:ArrayOfchildNode" />
+      <xs:element minOccurs="0" name="show" type="xs:boolean" />
+      <xs:element minOccurs="0" name="strGroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CATE_GROUP" nillable="true" type="tns:CATE_GROUP" />
+  <xs:simpleType name="enumGroupCate">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Policy" />
+          <xs:enumeration value="Application" />
+          <xs:enumeration value="Receipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Endorse">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Benefit">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Claim">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Letter">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GLIFE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgentCompensation">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Forfeiture">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GServiceReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="enumGroupCate" nillable="true" type="tns:enumGroupCate" />
+  <xs:complexType name="ArrayOfchildNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="childNode" nillable="true" type="tns:childNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfchildNode" nillable="true" type="tns:ArrayOfchildNode" />
+  <xs:complexType name="childNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClassPermChild" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameChild" type="tns:enumNamechild" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="authority" nillable="true" type="tns:authority" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="imageId" nillable="true" type="q1:ArrayOflong" />
+      <xs:element minOccurs="0" name="strDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strFiles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNameChild" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="childNode" nillable="true" type="tns:childNode" />
+  <xs:simpleType name="enumNamechild">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="dPolicy">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ePolicy">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VoicePolicy">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eApplication">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dApplication">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VoiceApplication">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VipCheckUp">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LoanReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eReceiptStatutory">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eReceiptLoanFee">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dEndorse">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eEndorse">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="REINSTATEMENT">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VoiceEndorse">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dBenefit">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dClaim">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AplLetter">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eLetter">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PurchaseLetter">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Cancel">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Surrender">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ForceSurrender">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PartialWithdrawal">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PremiumHoliday">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LAP">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="dGLIFE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgentCompensationReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Forfeiture">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GServiceReceipt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="enumNamechild" nillable="true" type="tns:enumNamechild" />
+  <xs:complexType name="ArrayOfIMG_IMAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_IMAGE" nillable="true" type="tns:IMG_IMAGE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_IMAGE" nillable="true" type="tns:ArrayOfIMG_IMAGE" />
+  <xs:complexType name="IMG_IMAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CLAIM_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_DATE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CLAIM_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CREATE_DATE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EASYDOCREF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="END_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IISA_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PAGE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RECEIPT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TERMINATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TERMINATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_print" type="xs:boolean" />
+      <xs:element minOccurs="0" name="print" type="xs:boolean" />
+      <xs:element minOccurs="0" name="strCREATE_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strPAGE_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTERMINATE_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thumbnail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_IMAGE" nillable="true" type="tns:IMG_IMAGE" />
+  <xs:complexType name="ArrayOfidmodel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="idmodel" nillable="true" type="tns:idmodel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfidmodel" nillable="true" type="tns:ArrayOfidmodel" />
+  <xs:complexType name="idmodel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PolicyID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="idmodel" nillable="true" type="tns:idmodel" />
+  <xs:complexType name="ArrayOfModelSearchLists">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModelSearchLists" nillable="true" type="tns:ModelSearchLists" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModelSearchLists" nillable="true" type="tns:ArrayOfModelSearchLists" />
+  <xs:complexType name="ModelSearchLists">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType_Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSurname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PolicyNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiptDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceiptNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelSearchLists" nillable="true" type="tns:ModelSearchLists" />
+  <xs:complexType name="ArrayOfCategoryList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CategoryList" nillable="true" type="tns:CategoryList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategoryList" nillable="true" type="tns:ArrayOfCategoryList" />
+  <xs:complexType name="CategoryList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GROUP_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="SEQ_NO_IN" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryList" nillable="true" type="tns:CategoryList" />
+  <xs:complexType name="DATA_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMPLOYEE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DATA_USER" nillable="true" type="tns:DATA_USER" />
+  <xs:complexType name="ArrayOfIMG_SET_DELETE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_SET_DELETE" nillable="true" type="tns:IMG_SET_DELETE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_SET_DELETE" nillable="true" type="tns:ArrayOfIMG_SET_DELETE" />
+  <xs:complexType name="IMG_SET_DELETE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DURATION_DAY" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FIELD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIELD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IMAGE_ID_MIGRATE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LIMIT_FILE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TABLE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEMINATE" type="ser:char" />
+      <xs:element minOccurs="0" name="TEMINATE_DATE" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_SET_DELETE" nillable="true" type="tns:IMG_SET_DELETE" />
+  <xs:complexType name="IMG_HD_DELETE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AMOUNT_DELETE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DELETE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DETAIL" nillable="true" type="tns:ArrayOfIMG_DT_DELETE" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOT_DELETE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TABLE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_FILES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_HD_DELETE" nillable="true" type="tns:IMG_HD_DELETE" />
+  <xs:complexType name="ArrayOfIMG_DT_DELETE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_DT_DELETE" nillable="true" type="tns:IMG_DT_DELETE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_DT_DELETE" nillable="true" type="tns:ArrayOfIMG_DT_DELETE" />
+  <xs:complexType name="IMG_DT_DELETE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERROR_DATAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HD_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PATH_FILE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS_FLAG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TERMINATE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TERMINATE_DATE" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_DT_DELETE" nillable="true" type="tns:IMG_DT_DELETE" />
+  <xs:complexType name="ArrayOfCATEGORY_INDEX">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CATEGORY_INDEX" nillable="true" type="tns:CATEGORY_INDEX" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCATEGORY_INDEX" nillable="true" type="tns:ArrayOfCATEGORY_INDEX" />
+  <xs:complexType name="CATEGORY_INDEX">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IndexName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexValues" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CATEGORY_INDEX" nillable="true" type="tns:CATEGORY_INDEX" />
+  <xs:complexType name="IMG_IMAGE_LOGS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATE_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LOGS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TYPE_LOGS_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_IMAGE_LOGS" nillable="true" type="tns:IMG_IMAGE_LOGS" />
+  <xs:complexType name="ArrayOfCATEGORY_INSERT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CATEGORY_INSERT" nillable="true" type="tns:CATEGORY_INSERT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCATEGORY_INSERT" nillable="true" type="tns:ArrayOfCATEGORY_INSERT" />
+  <xs:complexType name="CATEGORY_INSERT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CATEGORY_INSERT" nillable="true" type="tns:CATEGORY_INSERT" />
+  <xs:complexType name="ArrayOfIMAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMAGE" nillable="true" type="tns:IMAGE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMAGE" nillable="true" type="tns:ArrayOfIMAGE" />
+  <xs:complexType name="IMAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="col_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="col_val" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMAGE" nillable="true" type="tns:IMAGE" />
+  <xs:complexType name="ArrayOfEASYWINAPP_TREENODE_ITEM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EASYWINAPP_TREENODE_ITEM" nillable="true" type="tns:EASYWINAPP_TREENODE_ITEM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEASYWINAPP_TREENODE_ITEM" nillable="true" type="tns:ArrayOfEASYWINAPP_TREENODE_ITEM" />
+  <xs:complexType name="EASYWINAPP_TREENODE_ITEM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImageChildCount" type="xs:long" />
+      <xs:element minOccurs="0" name="ImageCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="tns:EASYWINAPP_TREENODE_ITEM" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isChild" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isRoot" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EASYWINAPP_TREENODE_ITEM" nillable="true" type="tns:EASYWINAPP_TREENODE_ITEM" />
+  <xs:complexType name="ArrayOfWINAPP_AUTHORITY">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WINAPP_AUTHORITY" nillable="true" type="tns:WINAPP_AUTHORITY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWINAPP_AUTHORITY" nillable="true" type="tns:ArrayOfWINAPP_AUTHORITY" />
+  <xs:complexType name="WINAPP_AUTHORITY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cateid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="permission" nillable="true" type="tns:authority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WINAPP_AUTHORITY" nillable="true" type="tns:WINAPP_AUTHORITY" />
+  <xs:complexType name="ArrayOfIMAGE_PAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMAGE_PAGE" nillable="true" type="tns:IMAGE_PAGE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMAGE_PAGE" nillable="true" type="tns:ArrayOfIMAGE_PAGE" />
+  <xs:complexType name="IMAGE_PAGE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EASYDOCREF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="PAGE_NUMBER" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMAGE_PAGE" nillable="true" type="tns:IMAGE_PAGE" />
+  <xs:complexType name="IMPORT_RECEIPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CERT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_TYPE_FLAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="categoryType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMPORT_RECEIPT" nillable="true" type="tns:IMPORT_RECEIPT" />
+  <xs:complexType name="ArrayOfCATEGORY_INDEX_LOT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CATEGORY_INDEX_LOT" nillable="true" type="tns:CATEGORY_INDEX_LOT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCATEGORY_INDEX_LOT" nillable="true" type="tns:ArrayOfCATEGORY_INDEX_LOT" />
+  <xs:complexType name="CATEGORY_INDEX_LOT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="categoryType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="datadetail" nillable="true" type="tns:ArrayOfCATEGORY_INDEX" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="file" nillable="true" type="q2:DataFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CATEGORY_INDEX_LOT" nillable="true" type="tns:CATEGORY_INDEX_LOT" />
+  <xs:complexType name="ArrayOfIMG_IMS_CATEGORY">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_IMS_CATEGORY" nillable="true" type="tns:IMG_IMS_CATEGORY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_IMS_CATEGORY" nillable="true" type="tns:ArrayOfIMG_IMS_CATEGORY" />
+  <xs:complexType name="IMG_IMS_CATEGORY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="JOB_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUB_JOB_CODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_IMS_CATEGORY" nillable="true" type="tns:IMG_IMS_CATEGORY" />
+  <xs:complexType name="IMG_APP_END">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP" nillable="true" type="tns:ArrayOfIMG_APP" />
+      <xs:element minOccurs="0" name="END" nillable="true" type="tns:ArrayOfIMG_END" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_APP_END" nillable="true" type="tns:IMG_APP_END" />
+  <xs:complexType name="ArrayOfIMG_APP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_APP" nillable="true" type="tns:IMG_APP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_APP" nillable="true" type="tns:ArrayOfIMG_APP" />
+  <xs:complexType name="IMG_APP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_APP" nillable="true" type="tns:IMG_APP" />
+  <xs:complexType name="ArrayOfIMG_END">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_END" nillable="true" type="tns:IMG_END" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_END" nillable="true" type="tns:ArrayOfIMG_END" />
+  <xs:complexType name="IMG_END">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="END_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_END" nillable="true" type="tns:IMG_END" />
+  <xs:complexType name="POLICY_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATE_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CERT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="END_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIPT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="POLICY_INFO" nillable="true" type="tns:POLICY_INFO" />
+  <xs:complexType name="ArrayOfPOLICY_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="POLICY_INFO" nillable="true" type="tns:POLICY_INFO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPOLICY_INFO" nillable="true" type="tns:ArrayOfPOLICY_INFO" />
+  <xs:complexType name="ArrayOfAPP_NEWBIS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="APP_NEWBIS" nillable="true" type="tns:APP_NEWBIS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAPP_NEWBIS" nillable="true" type="tns:ArrayOfAPP_NEWBIS" />
+  <xs:complexType name="APP_NEWBIS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="FileData" nillable="true" type="q3:DataFile" />
+      <xs:element minOccurs="0" name="IISA_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMAGE_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="PAGE_NUMBER" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="REGISTER_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REGISTER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="checkApp" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="APP_NEWBIS" nillable="true" type="tns:APP_NEWBIS" />
+  <xs:complexType name="ArrayOfIMG_LICENSE_SUPPORT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMG_LICENSE_SUPPORT" nillable="true" type="tns:IMG_LICENSE_SUPPORT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMG_LICENSE_SUPPORT" nillable="true" type="tns:ArrayOfIMG_LICENSE_SUPPORT" />
+  <xs:complexType name="IMG_LICENSE_SUPPORT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LICENSE_EXPIRED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LICENSE_KEY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_PERIOD" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LICENSE_START" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODIFY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MODIFY_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMAINING" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMG_LICENSE_SUPPORT" nillable="true" type="tns:IMG_LICENSE_SUPPORT" />
+  <xs:complexType name="ArrayOfEDM_Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDM_Document" nillable="true" type="tns:EDM_Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDM_Document" nillable="true" type="tns:ArrayOfEDM_Document" />
+  <xs:complexType name="EDM_Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TxnDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDM_Document" nillable="true" type="tns:EDM_Document" />
+  <xs:complexType name="ArrayOflistdocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listdocument" nillable="true" type="tns:listdocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistdocument" nillable="true" type="tns:ArrayOflistdocument" />
+  <xs:complexType name="listdocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seq" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listdocument" nillable="true" type="tns:listdocument" />
+  <xs:complexType name="EDM_IMPORT_CLAIM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATE_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CERT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CLAIM_REQ_NUMBER" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DataFile" nillable="true" type="q4:DataFile" />
+      <xs:element minOccurs="0" name="N_USERID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDM_IMPORT_CLAIM" nillable="true" type="tns:EDM_IMPORT_CLAIM" />
+</xs:schema>

@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{293338F0-027C-4967-BF90-FB2CCBD115BD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EdorseToEDM</RootNamespace>
+    <AssemblyName>EdorseToEDM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoleLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ConsoleLog.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAccessUtility">
+      <HintPath>.\DataAccessUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ITUtility, Version=2.2.8263.28933, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ITUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.16.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\BatchTransSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EasySolutionWcfSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EmailProviderWcfSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EDORSE_MODEL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpt_daily.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_daily.Designer.cs">
+      <DependentUpon>rpt_daily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_model.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\BatchTransSvc\BatTrans.wsdl" />
+    <None Include="Connected Services\BatchTransSvc\BatTrans.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\BatTrans1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\BatTrans2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\BatTrans3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\BatTrans4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\EdorseToEDM.BatchTransSvc.ArBatch_Info.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\EdorseToEDM.BatchTransSvc.AR_BATCH_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\EdorseToEDM.BatchTransSvc.DataBatchTrans_Log.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BatchTransSvc\EdorseToEDM.BatchTransSvc.Program.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionSvc.wsdl" />
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.APP_NEWBIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.AUTB_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.CategoryList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.CATEGORY_INDEX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.CATEGORY_INDEX_LOT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.CATEGORY_INSERT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.CATE_GROUP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.DataLogs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.DATA_USER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.EASYWEB_SEARCH_DETAILS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.EASYWINAPP_TREENODE_ITEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.EDM_Document.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.EDM_IMPORT_CLAIM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.idmodel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMAGE_PAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_ACCESS_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_APP_END.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_CATEGORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_IMAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_IMS_CATEGORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_LICENSE_SUPPORT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_MENU_BAR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_ROLE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_SET_DELETE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_SYSTEM_CONTROL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.IMG_USER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.listdocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.ModelSearchLists.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.PermissionRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.POLICYHOLDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.POLICY_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.WINAPP_AUTHORITY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EasySolutionWcfSvc\EdorseToEDM.EasySolutionWcfSvc.ZTB_USER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EdorseToEDM.EmailProviderWcfSvc.File_Upload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EdorseToEDM.EmailProviderWcfSvc.MailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProvider.wsdl" />
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ITUtility.DataFile.datasource" />
+    <None Include="Properties\DataSources\ITUtility.ProcessResult.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BatchTransSvc\" />
+    <WCFMetadataStorage Include="Connected Services\EasySolutionWcfSvc\" />
+    <WCFMetadataStorage Include="Connected Services\EmailProviderWcfSvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BatchTransSvc\BatTrans.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BatchTransSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BatchTransSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BatchTransSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EasySolutionWcfSvc\EasySolutionWcf.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EasySolutionWcfSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EasySolutionWcfSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EasySolutionWcfSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmailProviderWcfSvc\EmailProviderWcf.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmailProviderWcfSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmailProviderWcfSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmailProviderWcfSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="rpt_daily.resx">
+      <DependentUpon>rpt_daily.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

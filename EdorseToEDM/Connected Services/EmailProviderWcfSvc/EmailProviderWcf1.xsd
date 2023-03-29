@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/EmailProviderWcfSvc/EmailProviderWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" />
+  <xs:element name="SendMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="param" nillable="true" type="q1:MailParams" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendMailResult" nillable="true" type="q2:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailByAlternateView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="param" nillable="true" type="q3:MailParamsOld" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailByAlternateViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendMailByAlternateViewResult" nillable="true" type="q4:ProcessResult" />
+        <xs:element minOccurs="0" name="mailId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailOldVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="param" nillable="true" type="q5:MailParamsOld" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailOldVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendMailOldVersionResult" nillable="true" type="q6:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAboutPolicyInfoByMailId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="mailId" nillable="true" type="q7:ArrayOflong" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAboutPolicyInfoByMailIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailAboutPolicyInfoByMailIdResult" nillable="true" type="q8:ProcessResult" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q9:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAbountPolicyInfoByPolicyAndHolding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policyHolding" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAbountPolicyInfoByPolicyAndHoldingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailAbountPolicyInfoByPolicyAndHoldingResult" nillable="true" type="q10:ProcessResult" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q11:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailInfoByReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="refName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailInfoByReferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailInfoByReferenceResult" nillable="true" type="q12:ProcessResult" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q13:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailInfoByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailInfoByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailInfoByAppNoResult" nillable="true" type="q14:ProcessResult" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q15:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAboutPolicyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="policyId" nillable="true" type="q16:ArrayOflong" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAboutPolicyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailAboutPolicyInfoResult" nillable="true" type="q17:ProcessResult" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q18:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAbountPolicyInfoByPolicyNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailAbountPolicyInfoByPolicyNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailAbountPolicyInfoByPolicyNoResult" nillable="true" type="q19:ProcessResult" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q20:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileAttechments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="mailIds" nillable="true" type="q21:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileAttechmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetFileAttechmentsResult" nillable="true" type="q22:ProcessResult" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract" minOccurs="0" name="mailObjects" nillable="true" type="q23:ArrayOfFile_Upload" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailHistoryByPolicyId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policyId" type="xs:long" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailHistoryByPolicyIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailHistoryByPolicyIdResult" nillable="true" type="q24:ProcessResult" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q25:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailHistoryByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeAttachment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailHistoryByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetMailHistoryByAppNoResult" nillable="true" type="q26:ProcessResult" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="mailObjects" nillable="true" type="q27:ArrayOfMailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailAndOutMailId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/EmailManagement.DataContract.StructureModel" minOccurs="0" name="param" nillable="true" type="q28:MailParams" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailAndOutMailIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendMailAndOutMailIdResult" nillable="true" type="q29:ProcessResult" />
+        <xs:element minOccurs="0" name="mailId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

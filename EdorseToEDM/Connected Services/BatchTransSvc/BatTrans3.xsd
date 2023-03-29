@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" />
+  <xs:import schemaLocation="http://ws6.bla.co.th/BatchTransSvc/BatTrans.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AppSecurityProvider" />
+  <xs:element name="AddTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverDetail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beginTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="expectEndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddTransResult" nillable="true" type="q1:ProcessResult" />
+        <xs:element minOccurs="0" name="transId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTransByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expectEndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTransByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddTransByCodeResult" nillable="true" type="q2:ProcessResult" />
+        <xs:element minOccurs="0" name="transId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transId" type="xs:long" />
+        <xs:element minOccurs="0" name="expectEndTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="realEndTime" type="xs:dateTime" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="status" type="q3:char" />
+        <xs:element minOccurs="0" name="errorDetail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UpdateTransResult" nillable="true" type="q4:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataBatTrans_Log">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="typeselect" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataBatTrans_LogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataBatTrans_LogResult" nillable="true" type="q5:ProcessResult" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataBatTans_Log" nillable="true" type="q6:ArrayOfDataBatchTrans_Log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataUpdate" nillable="true" type="q7:ArrayOfVERIFY_INFO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="EditVerifyResult" nillable="true" type="q8:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetail_ArBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetail_ArBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetail_ArBatchResult" nillable="true" type="q9:ProcessResult" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataArBatch_Info" nillable="true" type="q10:ArrayOfArBatch_Info" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetail_AR_BATCH_DETAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="arbatchID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetail_AR_BATCH_DETAILResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDetail_AR_BATCH_DETAILResult" nillable="true" type="q11:ProcessResult" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataArBatchDetail" nillable="true" type="q12:ArrayOfAR_BATCH_DETAIL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData_AR_BATCH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="editDataArBatch" nillable="true" type="q13:ArrayOfEDIT_DATA_ARBATCH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData_AR_BATCHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SaveData_AR_BATCHResult" nillable="true" type="q14:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData_AR_BATCH_DETAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="editDataDetailArBatch" nillable="true" type="q15:ArrayOfEDIT_DATA_DEATAIL_ARBATCH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData_AR_BATCH_DETAILResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SaveData_AR_BATCH_DETAILResult" nillable="true" type="q16:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDataARBATCH_AND_BATCHDETAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataARBATCH" nillable="true" type="q17:ArrayOfEDIT_DATA_ARBATCH" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" minOccurs="0" name="dataARBATCH_DEATAL" nillable="true" type="q18:ArrayOfEDIT_DATA_DEATAIL_ARBATCH" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDataARBATCH_AND_BATCHDETAILResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SaveDataARBATCH_AND_BATCHDETAILResult" nillable="true" type="q19:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetPermissionResult" nillable="true" type="q20:ProcessResult" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="dataObject" nillable="true" type="q21:ArrayOfProgram" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BatTrans.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataBatchTrans_Log">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataBatchTrans_Log" nillable="true" type="tns:DataBatchTrans_Log" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataBatchTrans_Log" nillable="true" type="tns:ArrayOfDataBatchTrans_Log" />
+  <xs:complexType name="DataBatchTrans_Log">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchLog_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Batch_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Batch_Date_Str" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColorRow" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompletedCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="tns:ArrayOfDATA_DETAILS" />
+      <xs:element minOccurs="0" name="EditVerifySts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorDetail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seq" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="StartCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeOverCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataBatchTrans_Log" nillable="true" type="tns:DataBatchTrans_Log" />
+  <xs:complexType name="ArrayOfDATA_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DATA_DETAILS" nillable="true" type="tns:DATA_DETAILS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDATA_DETAILS" nillable="true" type="tns:ArrayOfDATA_DETAILS" />
+  <xs:complexType name="DATA_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchDetail_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Completeddate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Verify" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorDetail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Errordate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Startdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_VerifyDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeOverdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Update" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Verify" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerifyBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerifyDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DATA_DETAILS" nillable="true" type="tns:DATA_DETAILS" />
+  <xs:complexType name="ArrayOfVERIFY_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VERIFY_INFO" nillable="true" type="tns:VERIFY_INFO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVERIFY_INFO" nillable="true" type="tns:ArrayOfVERIFY_INFO" />
+  <xs:complexType name="VERIFY_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchDetail" nillable="true" type="tns:ArrayOfVERIFY_DETAIL" />
+      <xs:element minOccurs="0" name="VerifyBY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VERIFY_INFO" nillable="true" type="tns:VERIFY_INFO" />
+  <xs:complexType name="ArrayOfVERIFY_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VERIFY_DETAIL" nillable="true" type="tns:VERIFY_DETAIL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVERIFY_DETAIL" nillable="true" type="tns:ArrayOfVERIFY_DETAIL" />
+  <xs:complexType name="VERIFY_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Batch_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Batch_Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VERIFY_DETAIL" nillable="true" type="tns:VERIFY_DETAIL" />
+  <xs:complexType name="ArrayOfArBatch_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArBatch_Info" nillable="true" type="tns:ArBatch_Info" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArBatch_Info" nillable="true" type="tns:ArrayOfArBatch_Info" />
+  <xs:complexType name="ArBatch_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BATCH_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BATCH_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHECK_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CRITICAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DAYS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfAR_BATCH_DETAIL" />
+      <xs:element minOccurs="0" name="ERR_NOTIFY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ERR_SOLUTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULLNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULLNAME_UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="MONTHS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OWNER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROGRAM_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RELATED_BATCH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RELATED_SYSTEM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPEAT_EVERY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPEAT_UNTIL_DURATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESULT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUN_AS_USER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="START_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORK_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArBatch_Info" nillable="true" type="tns:ArBatch_Info" />
+  <xs:complexType name="ArrayOfAR_BATCH_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AR_BATCH_DETAIL" nillable="true" type="tns:AR_BATCH_DETAIL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAR_BATCH_DETAIL" nillable="true" type="tns:ArrayOfAR_BATCH_DETAIL" />
+  <xs:complexType name="AR_BATCH_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BATCH_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DAYS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Row" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULLNAME_UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="MONTHS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPEAT_EVERY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPEAT_UNTIL_DURATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="START_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPDATE_DATE_STR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AR_BATCH_DETAIL" nillable="true" type="tns:AR_BATCH_DETAIL" />
+  <xs:complexType name="ArrayOfEDIT_DATA_ARBATCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDIT_DATA_ARBATCH" nillable="true" type="tns:EDIT_DATA_ARBATCH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDIT_DATA_ARBATCH" nillable="true" type="tns:ArrayOfEDIT_DATA_ARBATCH" />
+  <xs:complexType name="EDIT_DATA_ARBATCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Input_BATCH_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_BATCH_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_CHECK_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_CRITICAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_DAYS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_ERR_NOTIFY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_ERR_SOLUTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_MONTHS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_OWNER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_PROGRAM_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_RELATED_BATCH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_RELATED_SYSTEM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_REPEAT_EVERY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_REPEAT_UNTIL_DURATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_RESULT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_RUN_AS_USER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_SERVER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_START_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_UPDATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Input_WORK_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDIT_DATA_ARBATCH" nillable="true" type="tns:EDIT_DATA_ARBATCH" />
+  <xs:complexType name="ArrayOfEDIT_DATA_DEATAIL_ARBATCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EDIT_DATA_DEATAIL_ARBATCH" nillable="true" type="tns:EDIT_DATA_DEATAIL_ARBATCH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEDIT_DATA_DEATAIL_ARBATCH" nillable="true" type="tns:ArrayOfEDIT_DATA_DEATAIL_ARBATCH" />
+  <xs:complexType name="EDIT_DATA_DEATAIL_ARBATCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BATCH_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Input_DAYS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_MONTHS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_REPEAT_EVERY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_REPEAT_UNTIL_DURATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_START_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_UPDATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Input_UPDATE_DATE" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EDIT_DATA_DEATAIL_ARBATCH" nillable="true" type="tns:EDIT_DATA_DEATAIL_ARBATCH" />
+</xs:schema>
